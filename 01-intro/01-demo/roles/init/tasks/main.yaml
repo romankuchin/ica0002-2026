@@ -1,2 +1,0 @@
-- name: Ansible ping module
-  ansible.builtin.ping:
