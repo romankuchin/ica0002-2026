@@ -1,0 +1,35 @@
+---
+name: Test
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  Test:
+    runs-on: ubuntu-slim
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Set up
+        run: |
+          python3 -m venv ~/ansible-venv
+          $HOME/ansible-venv/bin/pip install ansible==14.3.1 ansible-lint pytest pytest-testinfra
+          mkdir $HOME/.ansible
+          echo x > $HOME/.ansible/vault_password
+          echo "$HOME/ansible-venv/bin" >> $GITHUB_PATH
+
+      - name: Print versions
+        run: |
+          ansible --version
+          ansible-community --version
+          pytest --version
+
+      - name: Run tests
+        run: |
+          wget https://raw.githubusercontent.com/romankuchin/ica0002-2026/refs/heads/tests/tests/test_all.py
+          pytest -k'not test_local_ansible_version' -rA --color=yes --tb=no
