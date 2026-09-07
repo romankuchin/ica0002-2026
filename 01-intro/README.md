@@ -43,7 +43,7 @@ left menu, click `Add people` and add user `ica0002-bot` (here is its
 GitHub profile: [https://github.com/ica0002-bot](https://github.com/ica0002-bot)).
 
 Once you have completed all the steps above your repository should appear in
-[this list](http://193.40.157.25/students.html) automatically after some time (up to 30m).
+[this list](https://ica0002-bot.github.io/students.html) automatically after some time (up to 30m).
 If it does not, please ask the teachers for help.
 
 Note: You don't have to wait until your repository is added to this list, you
@@ -73,7 +73,7 @@ Your **public** SSH key can be found in `~/.ssh/id_[rsa|ed25519].pub` file. Add 
 
 Once you have added your public key to your GitHub account our bot should detect
 it automatically within 2..3 minutes. You can see the result
-[here](http://193.40.157.25/students.html).
+[here](https://ica0002-bot.github.io/students.html).
 
 Note: You don't have to wait until your key is added to this list, you can
 continue with the next task.
@@ -114,7 +114,7 @@ Logout and log in again. Now this command should also work:
 ## Task 4: Test access to your virtual machine
 
 First, make sure that your Git repository is set up correctly -- check
-[this list](http://193.40.157.25/students.html) for details.
+[this list](https://ica0002-bot.github.io/students.html) for details.
 
 Then, make sure that your virtual machine is set up -- click your name here and find the
 SSH access details on your page. Note the SSH port number!
@@ -154,7 +154,7 @@ Note: directory structure and file names matter! Create the files and
 directories named exactly as requested.
 
 Step 3: Update your inventory file named `hosts` -- check your own page from
-http://193.40.157.25/students.html to find the correct connection parameters.
+https://ica0002-bot.github.io/students.html to find the correct connection parameters.
 
 Step 4: Run the Ansible playbook:
 

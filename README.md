@@ -4,9 +4,9 @@ Course rules: [link](rules.md).
 
 Video lectures: [link](https://echo360.org.uk/section/b78187c2-cc31-4431-b9ad-471959e43862/public).
 
-[Discord](https://discord.com/download) channel invite: [link](https://discord.gg/BHGbhtyZ).
+[Discord](https://discord.com/download) channel invite: [link](https://discord.gg/B9TmqN9G).
 
-Virtual machines: [link](http://193.40.157.25/students.html).
+Virtual machines: [link](https://ica0002-bot.github.io/students.html)|[mirror](http://193.40.157.25/students.html).
 
 Class times:
 
