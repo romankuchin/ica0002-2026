@@ -35,7 +35,7 @@ Hint: use Ansible variable `groups['prometheus_servers']` for condition in Nginx
 
 To make Prometheus reachable from outside, run it with
 
-    --web.external-url=http://<your_public_http_endpoint>/prometheus
+    --web.external-url=/prometheus
 
 Put the required arguments into the `/etc/default/prometheus` file.
 Adjust `metrics_path` for job `prometheus` in the Prometheus config to make Prometheus self-monitoring work.
