@@ -56,7 +56,7 @@ use email or GitHub issues. We would like not to handle these in class.
  - Lab: Install Grafana and exporters for running services
 
 [Week 8: Logging](./08-logging)
- - Lecture: Grafana Loki, Promtail
+ - Lecture: Grafana Loki, Alloy
  - Lab: Configure cenralized logging
 
 [Week 9: Backups](./09-backups)
