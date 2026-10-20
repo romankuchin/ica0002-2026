@@ -237,14 +237,12 @@ Add another task to `roles/mysql/tasks/main.yaml` to create a MySQL database:
 1. Add this task after the one that ensures that MySQL server is started; MySQL server should be
    running before you can create databases.
 2. Use Ansible module
-   [mysql_db](https://docs.ansible.com/projects/ansible/13/collections/ansible/mysql/mysql_db_module.html);
-   note the module name: it's community module and it's named `community.mysql.mysql_db`, not
-   `ansible.builtin.<something>` as others you've seen before.
+   [mysql_db](https://docs.ansible.com/projects/ansible/13/collections/ansible/mysql/mysql_db_module.html).
 
 Use the variables you have just defined:
 
     name: MySQL database
-    community.mysql.mysql_db:
+    ansible.mysql.mysql_db:
       name: "{{ mysql_database }}"
 
 Note the quotes around `{{ ... }}`. These are needed, otherwise Ansible will fail to parse the code.
@@ -276,7 +274,7 @@ is configured to authorize local `root` user already. This is done via local UNI
 you need to do is to instruct Ansible how to use it. Try this instead:
 
     name: MySQL database
-    community.mysql.mysql_db:
+    ansible.mysql.mysql_db:
       name: "{{ mysql_database }}"
       login_unix_socket: /var/run/mysqld/mysqld.sock
 
@@ -306,7 +304,7 @@ Add another task to `mysql` role to create a MySQL user for the web application:
 Start with this:
 
     name: MySQL user
-    community.mysql.mysql_user:
+    ansible.mysql.mysql_user:
       name: "{{ mysql_user }}"
       password: "{{ mysql_password }}"
 
