@@ -51,7 +51,7 @@ Don't forget to add the new JSON file to your Ansible repo.
 
 Don't forget to add Loki to provisioned datasources in Grafana.
 
-## Task 4: Add Promtail and Loki monitoring to main Grafana dashboard
+## Task 4: Add Alloy and Loki monitoring to main Grafana dashboard
 
 Make sure that you gather metrics from Alloy and Loki:
  - Add Prometheus target named `alloy`
