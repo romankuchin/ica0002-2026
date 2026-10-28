@@ -78,6 +78,14 @@ it automatically within 2..3 minutes. You can see the result
 Note: You don't have to wait until your key is added to this list, you can
 continue with the next task.
 
+Note: GitHub exposes all your account's public SSH keys at
+`https://github.com/<username>.keys`. Our bot reads keys from this URL, and if
+you have multiple keys added, it will use the **latest** one added to your
+account as your virtual machine's public key. Make sure the key you want to
+use for this course is the most recently added one on that list -- if you add
+or reorder keys later, double-check `https://github.com/<username>.keys` to
+confirm which key will actually be used.
+
 
 ## Task 3: Install Ansible
 
@@ -129,6 +137,11 @@ hours). This means that you can access your virtual machine via SSH.
 
 If you cannot access the virtual machine or it's stuck in 'Creating' state,
 please ask the teachers for help.
+
+Note: Even after your virtual machine has been created, it can take some
+extra time before SSH key-based login is allowed on it. If your first
+attempt(s) fail right after the machine finishes creating, wait a bit and
+try again before asking for help.
 
 
 ## Task 5: Clone your Git repository
