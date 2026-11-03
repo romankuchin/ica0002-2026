@@ -16,6 +16,9 @@ and writable by user `backup`.
 Update `mysql` role: ensure that `/home/backup/mysql` directory is created on MySQL server, owned
 and writable by user `backup`.
 
+Update `prometheus` role: ensure that `/home/backup/prometheus` directory is created on Prometheus server, owned
+and writable by user `backup`.
+
 Update `init` role:
  - ensure `/home/backup/restore` directory is created, owned and writable by user `backup`
  - ensure [Duplicity](https://duplicity.gitlab.io) is installed; the package is available in the
@@ -346,10 +349,11 @@ Hints:
 
 Your repository contains these files and directories:
 
-    backup_restore.md
-    backup_sla.md  # (updated as needed)
     group_vars/all.yaml
     infra.yaml
+    docs/
+        backup_restore.md
+        backup_sla.md  # (updated as needed)
     roles/
         grafana/files/backups.json
         init/tasks/main.yaml
@@ -361,6 +365,10 @@ Your repository contains these files and directories:
         prometheus/templates/backup-cron.j2
 
 Your repository also contains all the required files from the previous labs.
+
+All the tests pass successfully:
+
+    ./run-tests.sh
 
 Every service you've deployed so far can be restored by following the instructions in the
 `backup_restore.md`.
